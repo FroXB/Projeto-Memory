@@ -49,14 +49,3 @@ O objetivo do projeto é aplicar conceitos fundamentais de desenvolvimento web, 
 
 ---
 
-## 5. Estrutura do Projeto
-
-Projeto-Memory/
-│
-├── assets/
-│   ├── logo.svg
-│   └── lines.svg
-│
-├── index.html
-├── styles.css
-└── scripts.js
