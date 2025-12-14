@@ -1,74 +1,49 @@
-Projeto Memory — Jogo da Memória (Web)
+Projeto Memory – Jogo da Memória
 
-Implementação de um jogo da memória em HTML/CSS/JavaScript, com embaralhamento de cartas, controle de estado de jogo (cartas viradas, pares encontrados, bloqueio durante validação) e interface com feedback de progresso (acertos/tentativas) e tela de finalização.
+Implementação de um jogo da memória utilizando tecnologias web básicas, com foco em lógica de jogo, manipulação do DOM e controle de estado em JavaScript.
 
 1. Visão Geral
 
-O projeto simula a mecânica clássica de “memory game”:
+O Projeto Memory reproduz a mecânica clássica de jogos da memória, onde o jogador deve encontrar pares de cartas idênticas.
+O sistema controla as cartas viradas, valida pares, contabiliza tentativas e identifica automaticamente o fim do jogo, exibindo o resultado final.
 
-O jogador vira duas cartas por vez;
-
-Se as cartas formam um par, elas permanecem abertas;
-
-Se não formam par, elas são ocultadas novamente após um curto delay;
-
-O jogo contabiliza tentativas e pares encontrados;
-
-Ao completar todos os pares, exibe uma tela de vitória com desempenho.
-
-O foco é exercitar:
-
-manipulação de DOM,
-
-controle de estado em JavaScript,
-
-lógica de jogo consistente (bloqueios e validações),
-
-layout responsivo com Grid.
+O objetivo do projeto é aplicar conceitos fundamentais de desenvolvimento web, especialmente no que diz respeito à lógica de interação e organização de código em JavaScript puro (Vanilla JS).
 
 2. Funcionalidades
 
-Embaralhamento das cartas a cada partida (Fisher–Yates).
+Embaralhamento aleatório das cartas a cada partida.
 
-Controle de tentativas (cada par de cartas virado conta 1 tentativa).
+Controle de cartas reveladas e pares encontrados.
 
-Contagem de acertos (pares corretos).
+Contagem de tentativas realizadas pelo jogador.
 
-Bloqueio de interação enquanto o par é validado (evita “spam click” e estados inválidos).
+Bloqueio de interação durante a verificação de pares.
 
-Detecção de fim de jogo e exibição de overlay com resultado.
+Exibição de tela de finalização ao completar todos os pares.
 
-Reinício de partida com reset de estado e novo embaralhamento.
+Reinício do jogo com reset completo do estado.
 
 3. Regras do Jogo
 
-O deck contém 8 pares (16 cartas).
+O jogo contém 8 pares de cartas (16 cartas no total).
 
-O jogador pode ter no máximo duas cartas reveladas por vez.
+O jogador pode revelar apenas duas cartas por vez.
 
-Se as cartas forem iguais (mesmo pairId), viram par permanente.
+Se as cartas reveladas forem iguais, elas permanecem abertas.
 
-Se forem diferentes, retornam ao estado fechado após 700ms.
+Caso contrário, elas retornam ao estado fechado após um pequeno intervalo.
 
-O jogo termina quando matchedPairs === totalPairs.
+Cada tentativa corresponde à verificação de um par.
+
+O jogo termina quando todos os pares forem encontrados.
 
 4. Tecnologias Utilizadas
 
-HTML5 (estrutura)
+HTML5 — Estrutura da aplicação.
 
-CSS3 (layout e estilos)
+CSS3 — Estilização, layout com Grid e overlay de finalização.
 
-CSS Grid para o tabuleiro
-
-overlay com backdrop-filter no fim do jogo
-
-JavaScript (Vanilla) (lógica e interação)
-
-manipulação do DOM
-
-controle de estado do jogo
-
-embaralhamento e validação de pares
+JavaScript (Vanilla) — Lógica do jogo, controle de estado e manipulação do DOM.
 
 5. Estrutura do Projeto
 Projeto-Memory/
